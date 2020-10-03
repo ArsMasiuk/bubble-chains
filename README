@@ -1,0 +1,67 @@
+Bubble Chains: Freeware crossplatform 2D arcade-puzzle game
+
+version 0.1.1
+
+Official website:
+  http://bubble-chains.sintegrial.com
+
+----------------------------------------------------------------------------------
+CREDITS
+
+created by: Sintegrial & XlabSoft, 2010
+  http://sintegrial.com
+  http://xlabsoft.com
+  
+partner of: Industrial Infosystems 
+  http://ii-system.com
+  
+Thanks to the authors of the free software used during game creation,
+graphic and sound resources.
+
+----------------------------------------------------------------------------------
+LICENSE
+
+This software is free and is distributed according to GPL and compatible licenses.
+Full text of GPL and more you can read here: 
+  http://www.fsf.org/licensing/licenses/gpl.html
+
+----------------------------------------------------------------------------------
+ABOUT THE GAME
+
+Bubble Chains is a funny 2D game which runs on Linux, Windows and FreeBSD. 
+Bubble Chains was created using only free development software and free resources.
+
+Game manual can be found on the official website: 
+  http://bubble-chains.sintegrial.com/about.php
+
+----------------------------------------------------------------------------------
+SUPPORTED PLATFORMS
+
+Since Bubble Chains is based on Qt4/SDL frameworks, all the platforms supported by 
+them should be able to build and launch the game.
+
+In particular:
+- MS Windows 7, Vista, XP
+- All Linux OS
+- FreeBSD
+
+----------------------------------------------------------------------------------
+INSTALLATION
+
+Installation manual can be found on the official website: 
+  http://bubble-chains.sintegrial.com/install.php
+
+---------------------------------------------------------------------------------
+CHANGELOG
+
+0.1.1:
+
+- fixed issue with restoring game progress
+- fixed some graphics
+
+- added Russian language pack
+
+
+0.1.0
+
+- initial release

@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<style type="text/css">
+body {
+color: #000000; 
+background-color: #f0f0ff; 
+font-family: Helvetica, Verdana, Arial, sans-serif; 
+word-spacing: normal; 
+letter-spacing: normal; 
+font-size: 12pt;
+font-style: normal;  
+text-align: justify; 
+text-indent: 0px;
+}
+h1 {
+text-align:left; 
+font-size: 14pt; 
+font-weight: 600;
+}
+.list { 
+vertical-align: middle; 
+}
+</style>
+</head>
+
+<body>
+<h1>Aim of the game</h1>
+
+<p>The aim of Bubble Chains is to remove all of the targets on each level, and to do this before the time (indicated with the blue-colored bar at the right) runs out. 
+Keep doing this until you have passed the last level and won the game.
+
+<h1>How to play</h1>
+
+<p>You have to collect color bubbles on the field by combining them into chains of three or more bubbles.
+To do this, press left mouse button on a bubble and drag the mouse over the surrounding bubbles of the same color.
+When all the desired bubbles are connected, release the button, and the chain will disappear. 
+<p>
+Do not release the button until the whole chain is combined. If you want to cancel current combination, just drag the mouse over the bubbles back.
+<br>
+<img src="item1.png">&nbsp;&nbsp;<img src="item2.png">&nbsp;&nbsp;<img src="item3.png">&nbsp;&nbsp;
+<img src="item4.png">&nbsp;&nbsp;<img src="item5.png">&nbsp;&nbsp;<img src="item6.png">
+
+<p>Except of the color bubbles, there are special items which can be used as a placeholder for any bubble, making your life easier.
+<br>
+<img src="item_jocker.png">
+
+<p>And remember: the longer chain is, the more points you get. A 8-bubble chain will give you more score than two 4-bubble ones, for example. 
+So always look for the longest possible combination (but don't forget about running time!).
+
+<h1>Targets</h1>
+
+<p>There are several targets of different types assigned randomly for each level (you can see them at the bottom of the screen).
+Targets are initially empty, but getting filled when you're collecting chains of the corresponding type. 
+A filled target disappears - so when all of them are gone, the level is won!
+
+<table class="hidden">
+<tr><td class="list"><img src="img64_base.png"></td><td class="list"><b>Simple targets</b> are the easiest to remove. 
+Just collect any chains and fill the targets. Neither color nor lenght of chains are important.</td>
+
+<tr><td class="list"><img src="img64_number.png"></td><td class="list"><b>Numeric targets</b> have a number in the middle. 
+This number indicates the minimum lenght of chains you have to collect in order to fill such a target.
+Color of chains is not important as well.</td>
+
+<tr><td class="list"><img src="img64_color.png"></td><td class="list"><b>Color targets</b> are filled when you're collecting chains of the corresponding color. 
+Lenght of a chain is not important.</td>
+
+<tr><td class="list"><img src="img64_faller.png"></td><td class="list"><b>Fall targets</b> are not supposed to be filled. 
+Instead, falling items appear on the field, and you have to let them reach the most bottom line of the field.
+Once falling item is there, it disappears with the target.
+
+<p>Falling items can not be combined into chains - so just give them a way to fall!</td>
+
+</table>
+
+<h1>Tools</h1>
+
+<p>There is a green-colored bar at the left side which represents the amount of the score needed for activating a tool. 
+Tools can help you pass the level significantly faster.
+
+<p>A tool is activated when the bar is full. Just collect color chains, and the bar will be rising until it reaches its top.
+Then you'll get the tool which is shown above the bar.
+
+<p>Longer chains giving you more points. Below the bar, there is an indicator of the longest chain you were able to collect during the game.
+Increasing this value lets you constantly spending less points needed to get next tools.
+
+<p>The following tools are available:
+<p>
+
+<table class="hidden">
+<tr><td class="list"><img src="clock.png"></td><td class="list"><b>Clock</b><br>adds +60 seconds to the level timer</td>
+<tr><td class="list"><img src="kill.png"></td><td class="list"><b>Item Killer</b><br>destroys a single item in the field</td>
+<tr><td class="list"><img src="bomb.png"></td><td class="list"><b>Explosion</b><br>explodes a region of 9 cells</td>
+<tr><td class="list"><img src="mixer.png"></td><td class="list"><b>Mixer</b><br>randomly shuffles items in the field</td>
+<tr><td class="list"><img src="bolt.png"></td><td class="list"><b>Bolt</b><br>randomly removes some items from the field</td>
+<tr><td class="list"><img src="row.png"></td><td class="list"><b>Row Blaster</b><br>kills all items in a row</td>
+<tr><td class="list"><img src="twins.png"></td><td class="list"><b>Twin Blaster</b><br>kills all the same-type items in the field</td>
+</table>
+
+</body>
+</html>
