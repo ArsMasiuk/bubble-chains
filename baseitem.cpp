@@ -8,6 +8,11 @@ BaseItem::BaseItem(qreal opacity, int steps) :
 }
 
 
+BaseItem::~BaseItem()
+{
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////
 
 PixmapItem::PixmapItem(int x, int y, int dx, int dy, const QPixmap &pm, int steps) :  BaseItem(1, steps),

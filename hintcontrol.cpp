@@ -3,6 +3,11 @@
 #include "scaler.h"
 #include "gamestock.h"
 
+#include <QTextBrowser>
+#include <QPixmap>
+#include <QString>
+#include <QPainter>
+
 ////////////////////////////////////////////////////////////////////////////////
 
 HintPainter::HintPainter(const HintInfo &hint) : myBlock(hint.blocking)

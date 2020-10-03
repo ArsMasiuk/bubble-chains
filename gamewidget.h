@@ -1,7 +1,9 @@
 #ifndef GAMEWIDGET_H
 #define GAMEWIDGET_H
 
-#include <QtGui>
+#include <QGraphicsView>
+#include <QString>
+#include <QPainter>
 
 
 class GameScene;
@@ -11,7 +13,7 @@ class GameWidget : public QGraphicsView
     Q_OBJECT
 
 public:
-    GameWidget(const QString &respath, QWidget *parent = 0);
+    GameWidget(const QString &respath, QWidget *parent = nullptr);
     ~GameWidget();
 
     static const QString& getResourcePath() { return resourcePath; }

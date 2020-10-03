@@ -1,7 +1,11 @@
 #ifndef BASEITEM_H
 #define BASEITEM_H
 
-#include <QtGui>
+#include <QPixmap>
+#include <QPainter>
+#include <QRect>
+#include <QFont>
+#include <QColor>
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -9,7 +13,7 @@ class BaseItem
 {
 public:
   BaseItem(qreal opacity, int steps);
-  virtual ~BaseItem() {}
+  virtual ~BaseItem();
 
   virtual bool advance() = 0;
 

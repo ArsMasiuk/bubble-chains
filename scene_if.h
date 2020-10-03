@@ -1,7 +1,9 @@
 #ifndef SCENE_IF_H
 #define SCENE_IF_H
 
-#include <QtGui>
+#include <QPixmap>
+#include <QString>
+#include <QApplication>
 
 #include "gameitem.h"
 #include "scaler.h"
@@ -13,7 +15,7 @@ class BaseItem;
 
 struct PlaceInfo
 {
-  PlaceInfo() : item(0), place(NoPlace)
+  PlaceInfo() : item(nullptr), place(NoPlace)
   {
   }
 

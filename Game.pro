@@ -1,8 +1,9 @@
-# -------------------------------------------------
-# Project created by QtCreator 2009-05-07T18:37:02
-# -------------------------------------------------
-QT += xml \
-    opengl
+TEMPLATE = app
+
+QT += widgets gui xml opengl
+
+CONFIG += resources_big
+
 unix: {
     TARGET = ./bin/chains
     target.path = /usr/bin/
@@ -10,21 +11,23 @@ unix: {
     datas.path = /usr/share/chains
     datas.files = data
     INSTALLS += datas
-    LIBS += -lXrandr
+    LIBS += -lXrandr -lX11
 }
+
 win32: {
     TARGET = ../bin/chains
-    INCLUDEPATH += winlibs/SDL-1.2.13/include/SDL \
-        winlibs/SDL_mixer-1.2.8
-    LIBS += -Lwinlibs/SDL-1.2.13/lib \
-        -Lwinlibs/SDL_mixer-1.2.8/lib \
-        -Lwinlibs/libs \
-        -lSDL.dll
+#    INCLUDEPATH += winlibs/SDL-1.2.13/include/SDL \
+#        winlibs/SDL_mixer-1.2.8
+#    LIBS += -Lwinlibs/SDL-1.2.13/lib \
+#        -Lwinlibs/SDL_mixer-1.2.8/lib \
+#        -Lwinlibs/libs \
+#        -lSDL.dll
     RC_FILE = res.rc
 }
-LIBS += -lSDL -lX11 \
-    -lSDL_mixer
-TEMPLATE = app
+
+#LIBS += -lSDL -lX11 \
+#    -lSDL_mixer
+
 SOURCES += main.cpp \
     gamewidget.cpp \
     gamescene.cpp \
@@ -65,6 +68,7 @@ SOURCES += main.cpp \
     gamehintcontrol.cpp \
     particlecontrol.cpp \
     helpform.cpp
+
 HEADERS += gamewidget.h \
     gamescene.h \
     defines.h \
@@ -100,8 +104,12 @@ HEADERS += gamewidget.h \
     gamehintcontrol.h \
     particlecontrol.h \
     helpform.h
+
 RESOURCES += resources.qrc
+
 FORMS += menu.ui \
     helpform.ui
+
 TRANSLATIONS += ./data/lang/chains_ru.ts
+
 OTHER_FILES += style/style.css

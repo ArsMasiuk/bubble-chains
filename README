@@ -1,29 +1,7 @@
-Bubble Chains: Freeware crossplatform 2D arcade-puzzle game
-
-version 0.1.1
+Bubble Chains: free crossplatform 2D arcade-puzzle game
 
 Official website:
-  http://bubble-chains.sintegrial.com
-
-----------------------------------------------------------------------------------
-CREDITS
-
-created by: Sintegrial & XlabSoft, 2010
-  http://sintegrial.com
-  http://xlabsoft.com
-  
-partner of: Industrial Infosystems 
-  http://ii-system.com
-  
-Thanks to the authors of the free software used during game creation,
-graphic and sound resources.
-
-----------------------------------------------------------------------------------
-LICENSE
-
-This software is free and is distributed according to GPL and compatible licenses.
-Full text of GPL and more you can read here: 
-  http://www.fsf.org/licensing/licenses/gpl.html
+	https://github.com/ArsMasiuk/bubble-chains
 
 ----------------------------------------------------------------------------------
 ABOUT THE GAME
@@ -31,28 +9,51 @@ ABOUT THE GAME
 Bubble Chains is a funny 2D game which runs on Linux, Windows and FreeBSD. 
 Bubble Chains was created using only free development software and free resources.
 
-Game manual can be found on the official website: 
-  http://bubble-chains.sintegrial.com/about.php
+----------------------------------------------------------------------------------
+CREDITS
+
+Bubble Chains originally created by: 
+	Ars Masiuk & Alexander Korchenko (c) 2010-now
+  
+Thanks to the authors of the free software, graphic and sound resources used 
+during game creation.
+
+----------------------------------------------------------------------------------
+LICENSE
+
+This software is free and is distributed according to GPL 3 and compatible licenses.
+Full text of GPL and more you can read here: 
+	http://www.fsf.org/licensing/licenses/gpl.html
 
 ----------------------------------------------------------------------------------
 SUPPORTED PLATFORMS
 
-Since Bubble Chains is based on Qt4/SDL frameworks, all the platforms supported by 
+Since Bubble Chains is based on Qt5 framework, all the platforms supported by 
 them should be able to build and launch the game.
 
 In particular:
-- MS Windows 7, Vista, XP
-- All Linux OS
-- FreeBSD
+	- MS Windows
+	- Linux
+	- FreeBSD
 
 ----------------------------------------------------------------------------------
 INSTALLATION
 
-Installation manual can be found on the official website: 
-  http://bubble-chains.sintegrial.com/install.php
+
 
 ---------------------------------------------------------------------------------
 CHANGELOG
+
+0.2.x:
+
+- original copyrights restored
+
+- sources made buildable with Qt5
+- Qt4 support deprecated
+- dependency on SDL library deprecated
+
+- fixed issue with displaying Russian help
+
 
 0.1.1:
 

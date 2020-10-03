@@ -10,6 +10,7 @@
 #include "version.h"
 
 #include <QDebug>
+#include <QTextStream>
 
 MenuWidget::MenuWidget(QWidget *parent) :
     QStackedWidget(parent)
@@ -47,6 +48,7 @@ MenuWidget::MenuWidget(QWidget *parent) :
     QFile fhelp(helpfile);
     if (fhelp.open(QIODevice::ReadOnly)) {
         QTextStream ts(&fhelp);
+        ts.setCodec("UTF-8");
         helpstring = ts.readAll().simplified();
         fhelp.close();
     }

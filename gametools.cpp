@@ -1,3 +1,5 @@
+#include <QApplication>
+
 #include "gametools.h"
 
 #include "scene_if.h"
@@ -25,7 +27,7 @@
 #include "particlecontrol.h"
 #include "gamehintcontrol.h"
 
-ToolSet * toolset = 0;
+ToolSet * toolset = nullptr;
 
 ////////////////////////////////////////////////////////////////////////////////
 

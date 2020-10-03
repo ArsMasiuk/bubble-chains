@@ -3,13 +3,6 @@
 
 #include <QtGui>
 
-#ifdef Q_OS_WIN32
-#include "SDL.h"
-#include "SDL_mixer.h"
-#else
-#include "SDL/SDL.h"
-#include "SDL/SDL_mixer.h"
-#endif
 
 class GameSound : public QObject
 {
@@ -42,7 +35,7 @@ public:
         sndTool
     };
 
-    Mix_Chunk* loadSound(const QString &filename);
+   // Mix_Chunk* loadSound(const QString &filename);
     void playSound(int index, int loops = 1);
     void stopSound(int index);
     void stopAllSounds();
@@ -65,11 +58,11 @@ signals:
     void musicFinished();
 
 private:
-    QList<Mix_Chunk*> m_sounds;
+    //QList<Mix_Chunk*> m_sounds;
 
     int music_vol, channel_vol;
 
-    Mix_Music *music;
+    //Mix_Music *music;
     QTimer *myTimer;
     bool musicEnabled, musicPlaying;
 };

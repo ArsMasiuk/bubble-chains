@@ -1,7 +1,11 @@
 #ifndef HINTCONTROL_H
 #define HINTCONTROL_H
 
-#include <QtGui>
+#include <QGraphicsScene>
+#include <QRect>
+#include <QPixmap>
+#include <QPoint>
+
 #include "scaler.h"
 
 ////////////////////////////////////////////////////////////////////////////////

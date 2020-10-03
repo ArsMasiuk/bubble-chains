@@ -73,8 +73,7 @@
         <file>images/bg_menu.jpg</file>
         <file>images/button_cancel.png</file>
         <file>images/button_ok.png</file>
-        <file>gui/cancel.png</file>
-        <file>gui/configure.png</file>
+
         <file>gui/finish.png</file>
         <file>gui/forward.png</file>
         <file>gui/add_user.png</file>
@@ -82,8 +81,6 @@
         <file>gui/cancel.png</file>
         <file>gui/configure.png</file>
         <file>gui/display.png</file>
-        <file>gui/finish.png</file>
-        <file>gui/forward.png</file>
         <file>gui/games.png</file>
         <file>gui/lamp.png</file>
         <file>gui/mycomputer.png</file>
