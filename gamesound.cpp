@@ -1,33 +1,40 @@
 #include "gamesound.h"
 #include "gamewidget.h"
 
-GameSound* sndEngine = 0;
+#include <QDebug>
+#include <QAudioDeviceInfo>
+
+GameSound* sndEngine = nullptr;
+
+// divider coefficient for volume range (0..128 GUI = 0..1 engine)
+const qreal VOLUME_COEFF = 128.0;
+
 
 GameSound::GameSound()
 {
   // load sounds
   QString sndpath = GameWidget::getResourcePath() + "sounds/";
 
-//  loadSound(sndpath + "disappear.wav");
-//  loadSound(sndpath + "smallhammer.wav");
-//  loadSound(sndpath + "unblock.wav");
-//  loadSound(sndpath + "hammer.wav");
-//  loadSound(sndpath + "bighammer.wav");
-//  loadSound(sndpath + "bomb.wav");
-//  loadSound(sndpath + "row.wav");
-//  loadSound(sndpath + "randomkill.wav");
-//  loadSound(sndpath + "mixer.wav");
-//  loadSound(sndpath + "twin.wav");
-//  loadSound(sndpath + "clock.wav");
-//  loadSound(sndpath + "bonusend.wav");
-//  loadSound(sndpath + "newitem.wav");
-//  loadSound(sndpath + "target.wav");
-//  loadSound(sndpath + "levelstart.wav");
-//  loadSound(sndpath + "levelfail.wav");
-//  loadSound(sndpath + "levelwon.wav");
-//  loadSound(sndpath + "beep.wav");
-//  loadSound(sndpath + "bonus.wav");
-//  loadSound(sndpath + "newtool.wav");
+  loadSound(sndpath + "disappear.wav");
+  loadSound(sndpath + "smallhammer.wav");
+  loadSound(sndpath + "unblock.wav");
+  loadSound(sndpath + "hammer.wav");
+  loadSound(sndpath + "bighammer.wav");
+  loadSound(sndpath + "bomb.wav");
+  loadSound(sndpath + "row.wav");
+  loadSound(sndpath + "randomkill.wav");
+  loadSound(sndpath + "mixer.wav");
+  loadSound(sndpath + "twin.wav");
+  loadSound(sndpath + "clock.wav");
+  loadSound(sndpath + "bonusend.wav");
+  loadSound(sndpath + "newitem.wav");
+  loadSound(sndpath + "target.wav");
+  loadSound(sndpath + "levelstart.wav");
+  loadSound(sndpath + "levelfail.wav");
+  loadSound(sndpath + "levelwon.wav");
+  loadSound(sndpath + "beep.wav");
+  loadSound(sndpath + "bonus.wav");
+  loadSound(sndpath + "newtool.wav");
 
   // music
  // music = 0;
@@ -46,76 +53,63 @@ GameSound::GameSound()
 
 GameSound::~GameSound()
 {
-//  Mix_HaltMusic();
+  stopMusic();
+  stopAllSounds();
 
-//  for (int i = 0; i < m_sounds.count(); i++)
-//  {
-//    Mix_FreeChunk(m_sounds.at(i));
-//  }
+  qDeleteAll(m_sounds);
+  m_sounds.clear();
 
 //  Mix_FreeMusic(music);
 }
 
-//Mix_Chunk* GameSound::loadSound(const QString &filename)
-//{
-//  Mix_Chunk *sound = Mix_LoadWAV(filename.toLocal8Bit().constData());
+int GameSound::loadSound(const QString &filename)
+{
+    QSoundEffect *sound = new QSoundEffect;
+    sound->setSource(QUrl::fromLocalFile(filename));
 
-//  if(sound == NULL) {
-//    qDebug() << filename << ": sound not loaded: " << Mix_GetError();
-//    //fprintf(stderr, "Unable to load WAV file: %s\n", Mix_GetError());
-//  }
+//    while (sound->status() == QSoundEffect::Loading);
 
-//  m_sounds.append(sound);
+//    if (!sound->isLoaded())
+//    {
+//        delete sound;
+//        qDebug() << QUrl::fromLocalFile(filename) << ": sound not loaded";
+//        return -1;
+//    }
 
-//  return sound;
-//}
+    m_sounds.append(sound);
+
+    return m_sounds.size()-1;
+}
 
 void GameSound::playSound(int index, int loops)
 {
-//    if (index >= 0 && index < m_sounds.count())
-//    {
-//      Mix_Chunk *chunk = m_sounds.at(index);
-//      if (!chunk)
-//        return;
-
-//      Mix_VolumeChunk(chunk, channel_vol);
-
-//      int channel = Mix_PlayChannel(-1, chunk, 0);
-//      if(channel == -1)
-//      {
-//        //qDebug() << "Unable to play sound file: " << Mix_GetError();
-//        //fprintf(stderr, "Unable to play sound file: %s\n", Mix_GetError());
-//      }
-//      else
-//        Mix_Volume(channel, channel_vol);
-//    }
+    if (index >= 0 && index < m_sounds.count())
+    {
+        QSoundEffect *sound = m_sounds[index];
+        sound->setLoopCount(loops);
+        sound->setVolume(channel_vol);
+        sound->play();
+    }
 }
 
 void GameSound::stopSound(int index)
 {
-//    if (index >= 0 && index < m_sounds.count())
-//        m_sounds.at(index)->stop();
+    if (index >= 0 && index < m_sounds.count())
+    {
+        m_sounds[index]->stop();
+    }
 }
 
 void GameSound::stopAllSounds()
 {
-//    for (int i = 0; i <  m_sounds.count(); i++)
-//        m_sounds.at(i)->stop();
+    for (int i = 0; i <  m_sounds.count(); i++)
+        m_sounds.at(i)->stop();
 }
 
-void GameSound::setChannelVolume(int val, int ch)
+void GameSound::setChannelVolume(int val, int /*ch*/)
 {
-//  if (ch < 0)
-//    for (int i = 0; i < 8; i++)
-//      Mix_Volume(i, val);
-//  else
-//    Mix_Volume(ch, val);
-//
-//  if (ch==-1)
-    channel_vol = val;
+    channel_vol = (qreal)val / VOLUME_COEFF;
 }
-
-
 
 
 void GameSound::loadMusic(const QString &filename)
@@ -134,10 +128,10 @@ void GameSound::loadMusic(const QString &filename)
 
 void GameSound::playMusic()
 {
-//  musicPlaying = true;
+  musicPlaying = true;
 
-//  if (!musicEnabled)
-//    return;
+  if (!musicEnabled)
+    return;
 
 //  int channel = Mix_PlayMusic(music, 0);
 //  if(channel == -1)
@@ -147,30 +141,30 @@ void GameSound::playMusic()
 //  }
 
 //  Mix_VolumeMusic(music_vol);
-//  myTimer->start();
+  myTimer->start();
 }
 
 void GameSound::stopMusic()
 {
 //  Mix_HaltMusic();
-//  musicPlaying = false;
-//  myTimer->stop();
+  musicPlaying = false;
+  myTimer->stop();
 }
 
 void GameSound::enableMusic(bool on)
 {
-//  musicEnabled = on;
-//  if (musicEnabled)
-//  {
-//    if (musicPlaying)
-//      playMusic();
-//  }
-//  else
-//  {
-//    Mix_HaltMusic();
-//    myTimer->stop();
-//    // do NOT set musicPlaying to false!
-//  }
+  musicEnabled = on;
+  if (musicEnabled)
+  {
+    if (musicPlaying)
+      playMusic();
+  }
+  else
+  {
+    //Mix_HaltMusic();
+    myTimer->stop();
+    // do NOT set musicPlaying to false!
+  }
 }
 
 void GameSound::checkPlayMusic()
@@ -183,6 +177,5 @@ void GameSound::checkPlayMusic()
 
 void GameSound::setMusicVolume(int val)
 {
-//  music_vol = val;
-//  Mix_VolumeMusic(val);
+    music_vol = (qreal)val / VOLUME_COEFF;
 }

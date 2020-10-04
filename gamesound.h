@@ -1,7 +1,12 @@
 #ifndef GAMESOUND_H
 #define GAMESOUND_H
 
-#include <QtGui>
+#include <QObject>
+#include <QString>
+#include <QTimer>
+#include <QList>
+#include <QSoundEffect>
+#include <QSound>
 
 
 class GameSound : public QObject
@@ -35,18 +40,16 @@ public:
         sndTool
     };
 
-   // Mix_Chunk* loadSound(const QString &filename);
+    int loadSound(const QString &filename);
     void playSound(int index, int loops = 1);
     void stopSound(int index);
     void stopAllSounds();
     void setChannelVolume(int val, int ch = -1);
-    int soundVolume() const { return channel_vol; }
 
     void loadMusic(const QString &filename);
     void playMusic();
     void stopMusic();
     void setMusicVolume(int val);
-    int musicVolume() const { return music_vol; }
 
     inline bool isMusicEnabled() const { return musicEnabled; }
     void enableMusic(bool on = true);
@@ -58,11 +61,11 @@ signals:
     void musicFinished();
 
 private:
-    //QList<Mix_Chunk*> m_sounds;
+    QList<QSoundEffect*> m_sounds;
 
-    int music_vol, channel_vol;
+    qreal music_vol = 1, channel_vol = 1;
 
-    //Mix_Music *music;
+    QSound *m_music;
     QTimer *myTimer;
     bool musicEnabled, musicPlaying;
 };

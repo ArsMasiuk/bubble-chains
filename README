@@ -51,6 +51,7 @@ CHANGELOG
 - sources made buildable with Qt5
 - Qt4 support deprecated
 - dependency on SDL library deprecated
+- Sound effects are played via Qt Multimedia instead
 
 - fixed issue with displaying Russian help
 

@@ -284,7 +284,7 @@ void MenuWidget::on_bGraphicsOk_clicked()
     bool acc = ui.cbAccel->isChecked();
     if (acc != gameProfile->isAccelerated())
     {
-      QMessageBox::information(0, tr("Restart needed"),
+      QMessageBox::information(nullptr, tr("Restart needed"),
                                tr("In order to enable or disable acceleration,\n please restart the game."),
                                QMessageBox::Close);
     }

@@ -2,7 +2,7 @@
 #include "gamewidget.h"
 #include "gameprofile.h"
 
-GameBackground * gameBackground = 0;
+GameBackground * gameBackground = nullptr;
 
 enum BgBlend { BB_NONE, BB_ALPHA, BB_BLOCKS };
 
@@ -105,7 +105,7 @@ GameBackground::GameBackground()
   priv = new BgPrivate();
 }
 
-void GameBackground::readProfile(PlayerInfo */*pl*/)
+void GameBackground::readProfile(PlayerInfo* /*pl*/)
 {
   priv->init();
 }

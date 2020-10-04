@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += widgets gui xml opengl
+QT += widgets gui xml opengl multimedia
 
 CONFIG += resources_big
 
@@ -8,20 +8,26 @@ unix: {
     TARGET = ./bin/chains
     target.path = /usr/bin/
     INSTALLS += target
+
     datas.path = /usr/share/chains
     datas.files = data
     INSTALLS += datas
+
     LIBS += -lXrandr -lX11
 }
 
 win32: {
-    TARGET = ../bin/chains
+    DESTDIR = $$OUT_PWD/bin
+    TARGET = chains
+
 #    INCLUDEPATH += winlibs/SDL-1.2.13/include/SDL \
 #        winlibs/SDL_mixer-1.2.8
 #    LIBS += -Lwinlibs/SDL-1.2.13/lib \
 #        -Lwinlibs/SDL_mixer-1.2.8/lib \
 #        -Lwinlibs/libs \
 #        -lSDL.dll
+    LIBS += -lUser32
+
     RC_FILE = res.rc
 }
 
