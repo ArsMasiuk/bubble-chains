@@ -1,0 +1,77 @@
+[DEBREATE-0.7.13]
+<<CTRL>>
+Package: bubble-chains
+Version: 0.2.0
+Maintainer: Ars Masiuk <ars.masiuk@gmail.com>
+Section: games
+Source: https://github.com/ArsMasiuk/bubble-chains
+Homepage: https://github.com/ArsMasiuk/bubble-chains
+Architecture: amd64
+Priority: optional
+Depends: libXrandr, libX11, libQt5X11Extras (>=5.9), libQt5Multimedia (>=5.9), libQt5OpenGL (>=5.9), libQt5Widgets (>=5.9), libQt5Network (>=5.9)
+Description: Arcade and puzzle 2D game where you have to remove all the target pieces by seeking for chains of bubbles of the same color
+ The aim of the game is to remove all the target pieces by seeking for chains of bubbles of the same color on each level,
+ and to do this before the time runs out.
+ .
+ Keep doing this until you have beaten the last level and won the game.
+
+<</CTRL>>
+<<FILES>>
+1
+/home/osboxes/Work/bubble-chains/bin/chains* -> chains -> /usr/local/bin
+/home/osboxes/Work/bubble-chains/data -> data -> /usr/share/games/chains
+/home/osboxes/Work/bubble-chains/setup.linux/chains.png -> chains.png -> /usr/share/pixmaps
+/home/osboxes/Work/bubble-chains/setup.linux/chains.desktop -> chains.desktop -> /usr/share/applications
+/home/osboxes/Work/bubble-chains/setup.linux/chains.appdata.xml -> chains.appdata.xml -> /usr/share/appdata
+/home/osboxes/Work/bubble-chains/setup.linux/chains.png -> chains.png -> /usr/share/icons/hicolor/256x256/apps
+<</FILES>>
+<<SCRIPTS>>
+<<PREINST>>
+0
+<</PREINST>>
+<<POSTINST>>
+0
+<</POSTINST>>
+<<PRERM>>
+0
+<</PRERM>>
+<<POSTRM>>
+0
+<</POSTRM>>
+<</SCRIPTS>>
+<<CHANGELOG>>
+<<DEST>>DEFAULT<</DEST>>
+bubble-chains (0.2.0) ; urgency=low
+
+  * original copyrights restored
+  * sources made buildable with Qt5
+  * Qt4 support deprecated
+  * dependency on SDL library deprecated
+  * Sound effects are played via Qt Multimedia instead
+  * fixed issue with displaying Russian help
+
+ -- Ars Masiuk <ars.masiuk@gmail.com>  Mon, 05 Oct 2020 01:08:36 +0200
+
+<</CHANGELOG>>
+<<COPYRIGHT>>
+
+<</COPYRIGHT>>
+<<MENU>>
+1
+Name=Bubble Chains
+Version=1.0
+Exec=chains
+Comment=Seek for chains of bubbles of the same color
+Icon=/usr/share/pixmaps/chains.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Game;LogicGame;Qt;ArcadeGame;BlocksGame;
+<</MENU>>
+<<BUILD>>
+1
+1
+1
+strip
+<</BUILD>>

@@ -8,9 +8,8 @@
   <summary>Arcade and puzzle 2D game where you have to remove all the target pieces by seeking for chains of bubbles of the same color</summary>
   <description>
     <p>
-      The aim of JAG is to remove all the target pieces by seeking for chains of bubbles of the same color on each level,
-      and to do this before the time runs out. Keep doing this until you
-      have beaten the last level and won the game.
+      The aim of the game is to remove all the target pieces by seeking for chains of bubbles of the same color on each level,
+      and to do this before the time runs out. Keep doing this until you have beaten the last level and won the game.
     </p>
   </description>
   <url type="homepage">https://github.com/ArsMasiuk/bubble-chains</url>
