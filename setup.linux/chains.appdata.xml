@@ -5,7 +5,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Bubble Chains</name>
-  <summary>Arcade and puzzle 2D game in which you have to remove all the target pieces by seeking for chains of bubbles of the same color</summary>
+  <summary>Arcade and puzzle 2D game where you have to remove all the target pieces by seeking for chains of bubbles of the same color</summary>
   <description>
     <p>
       The aim of JAG is to remove all the target pieces by seeking for chains of bubbles of the same color on each level,

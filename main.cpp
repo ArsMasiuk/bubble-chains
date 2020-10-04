@@ -26,9 +26,11 @@ int main(int argc, char *argv[])
     resourcePath += "data/"; // bin -> data
 
     // on X11, we'll check if data directory exists locally first
-  #ifdef Q_WS_X11
+  #ifdef Q_OS_LINUX
+    qDebug() << resourcePath;
+
     if (!QDir(resourcePath).exists())
-      resourcePath = "/usr/share/chains/data/";
+      resourcePath = "/usr/share/games/chains/data/";
   #endif
 
     if (!QDir(resourcePath).exists()) {
