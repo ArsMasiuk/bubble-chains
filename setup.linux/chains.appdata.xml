@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2010-2020 Ars Masiuk, Alex Korchenko -->
+<component type="desktop">
+  <id>chains.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Bubble Chains</name>
+  <summary>Arcade and puzzle 2D game in which you have to remove all the target pieces by seeking for chains of bubbles of the same color</summary>
+  <description>
+    <p>
+      The aim of JAG is to remove all the target pieces by seeking for chains of bubbles of the same color on each level,
+      and to do this before the time runs out. Keep doing this until you
+      have beaten the last level and won the game.
+    </p>
+  </description>
+  <url type="homepage">https://github.com/ArsMasiuk/bubble-chains</url>
+  <screenshots>
+    <screenshot type="default">
+      <image>screenshot.jpg</image>
+      <caption>Screenshot of the first level of the game</caption>
+    </screenshot>
+  </screenshots>
+  <updatecontact>https://github.com/ArsMasiuk/bubble-chains/issues</updatecontact>
+  <translation type="qt">chains</translation>
+</component>

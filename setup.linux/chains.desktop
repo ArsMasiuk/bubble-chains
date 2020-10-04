@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Bubble Chains
+GenericName=Arcade-puzzle 2D game
+Comment=Arcade and puzzle 2D game in which you have to remove all the target pieces by seeking for chains of bubbles of the same color
+Exec=chains
+Icon=chains
+Type=Application
+Categories=Game;LogicGame;
