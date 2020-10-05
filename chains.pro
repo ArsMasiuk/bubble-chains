@@ -4,6 +4,13 @@ QT += widgets gui xml opengl multimedia
 
 CONFIG += resources_big
 
+VERSION = 0.2.0.0
+QMAKE_TARGET_COPYRIGHT = (c) 2010-2020 A.Masiuk, A.Korchenko
+QMAKE_TARGET_PRODUCT = Bubble Chains
+QMAKE_TARGET_DESCRIPTION = Free crossplatform 2D arcade-puzzle game
+QMAKE_TARGET_COMPANY =
+
+
 unix: {
     TARGET = ./bin/chains
     target.path = /usr/local/bin
@@ -13,15 +20,15 @@ unix: {
     datas.files = data
     INSTALLS += datas
 	
-	desktop.path = /usr/share/applications/
+    desktop.path = /usr/share/applications/
     desktop.files = setup.linux/chains.desktop
     INSTALLS += desktop
 	
-	icon.path = /usr/share/icons/hicolor/256x256/apps/
+    icon.path = /usr/share/icons/hicolor/256x256/apps/
     icon.files = setup.linux/chains.png
     INSTALLS += icon
 
-	icon2.path = /usr/share/pixmaps
+    icon2.path = /usr/share/pixmaps
     icon2.files = setup.linux/chains.png
     INSTALLS += icon2
 
@@ -30,7 +37,7 @@ unix: {
     INSTALLS += appdata
 	
     LIBS += -lXrandr -lX11
-	QT += x11extras
+    QT += x11extras
 }
 
 win32: {
@@ -39,7 +46,9 @@ win32: {
 
     LIBS += -lUser32
 
-    RC_FILE = res.rc
+    RC_ICONS = icon.ico
+
+    #RC_FILE = res.rc
 }
 
 SOURCES += main.cpp \

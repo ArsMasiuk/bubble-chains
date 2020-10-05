@@ -10,36 +10,49 @@ Bubble Chains is a funny 2D game which runs on Linux, Windows and FreeBSD.
 Bubble Chains was created using only free development software and free resources.
 
 ----------------------------------------------------------------------------------
-CREDITS
+CREDITS & LICENSE
 
 Bubble Chains originally created by: 
 	Ars Masiuk & Alexander Korchenko (c) 2010-now
   
-Thanks to the authors of the free software, graphic and sound resources used 
-during game creation.
-
-----------------------------------------------------------------------------------
-LICENSE
-
-This software is free and is distributed according to GPL 3 and compatible licenses.
+This software is free and is distributed according to GPL-3 and compatible licenses.
 Full text of GPL and more you can read here: 
 	http://www.fsf.org/licensing/licenses/gpl.html
 
+Icon set (GPL):
+	KDE Crystal Diamond (c) Everaldo Coelho
+
+Thanks to the authors of the free software, graphic and sound resources used 
+during game creation.
+	
 ----------------------------------------------------------------------------------
 SUPPORTED PLATFORMS
 
 Since Bubble Chains is based on Qt5 framework, all the platforms supported by 
-them should be able to build and launch the game.
+it should be able to build and launch the game on.
 
 In particular:
-	- MS Windows
+	- Microsoft Windows
 	- Linux
 	- FreeBSD
 
 ----------------------------------------------------------------------------------
 INSTALLATION
 
-
+Microsoft Windows:
+	- download corresponding installer executable
+	- run it and follow the instructions
+	
+DEB-based Linux (Ubuntu, Debian etc.):
+	- download corresponding .deb package (i.e. bubble-chains.xyz.deb)
+	- install it by running in the terminal:
+		sudo apt install ./bubble-chains.xyz.deb
+		
+RPM-based Linux (Fedora, RHEL etc.):
+	- tbd.
+	
+Installation from sources:
+	- tbd.
 
 ---------------------------------------------------------------------------------
 CHANGELOG
