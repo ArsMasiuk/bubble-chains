@@ -1,0 +1,14 @@
+Package: bubble-chains
+Version: 0.2.0
+Maintainer: Ars Masiuk <ars.masiuk@gmail.com>
+Section: games
+Source: https://github.com/ArsMasiuk/bubble-chains
+Homepage: https://github.com/ArsMasiuk/bubble-chains
+Architecture: amd64
+Priority: optional
+Depends: libqt5x11extras5 (>=5.9), libqt5multimedia5 (>=5.9), libqt5opengl5 (>=5.9), libqt5widgets5 (>=5.9), libqt5network5 (>=5.9)
+Description: Arcade and puzzle 2D game where you have to remove all the target pieces by seeking for chains of bubbles of the same color
+ The aim of the game is to remove all the target pieces by seeking for chains of bubbles of the same color on each level,
+ and to do this before the time runs out.
+ .
+ Keep doing this until you have beaten the last level and won the game.
