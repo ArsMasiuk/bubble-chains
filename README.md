@@ -4,6 +4,8 @@ Bubble Chains is a funny 2D game which runs on Linux, Windows and FreeBSD.
 
 The aim of Bubble Chains is to remove all of the targets on each level, and to do this before the time (indicated with the blue-colored bar at the right) runs out. Keep doing this until you have passed the last level and won the game. 
 
+![screenshot](https://user-images.githubusercontent.com/19762856/102863506-f8e8ec00-4432-11eb-9772-10b0ca93a92f.PNG)
+
 # Changes compared to the original game
 
 This repository contains original source codes and resources of the Bubble Chains game created in the year 2010, including necessary changes to be build with modern C++ compilers. 
@@ -29,7 +31,7 @@ Bubble Chains software is free and is distributed according to GPL-3 and compati
 Full text of GPL and more you can read here: http://www.fsf.org/licensing/licenses/gpl.html
 
 Originally copyrighted by:	
-- Ars Masiuk & Alexander Korchenko (c) 2010-now
+- 2010-now (c) Arseniy Masiuk & Alexander Korchenko
 
 Icon set used in the game (GPL):
 - KDE Crystal Diamond (c) Everaldo Coelho (https://www.iconfinder.com/iconsets/KDE_Crystal)
