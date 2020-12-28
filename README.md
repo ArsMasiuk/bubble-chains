@@ -1,5 +1,8 @@
 # Original Bubble Chains Game
 
+[![Github All Releases](https://img.shields.io/github/downloads/ArsMasiuk/bubble-chains/total?style=for-the-badge)](https://github.com/ArsMasiuk/qvge/releases/latest)
+![GitHub release](https://img.shields.io/github/v/release/ArsMasiuk/bubble-chains?style=for-the-badge)
+
 Bubble Chains is a funny 2D game which runs on Linux, Windows and FreeBSD. 
 
 You have to collect color bubbles on the field by combining them into chains of three or more bubbles. Collected chains disapper, making other bubbles falling down. The longer is a chain, the more score is added to the corresponding target at the bottom. Completed targets are then removed from the field.
