@@ -45,7 +45,6 @@ Qt framework (https://www.qt.io) is used under open-source license (GPL).
 Bubble Chains has been created using only free development software and free resources.
 Its direct or indirect (i.e. derivative work) copies cannot be sold or used in any other commercial ways.
 
-Thanks to the authors of the free software, graphic and sound resources used 
-during game creation.
+Thanks to the authors of the free software, graphic and sound resources used during creation of the game.
 
 If I have occasionally forgotten to mention somebody's work used in the game, please contact me to resolve the issue.
