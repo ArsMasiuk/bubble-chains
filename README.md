@@ -1,7 +1,7 @@
 # Original Bubble Chains Game
 
-[![Github All Releases](https://img.shields.io/github/downloads/ArsMasiuk/bubble-chains/total?style=for-the-badge)](https://github.com/ArsMasiuk/qvge/releases/latest)
-![GitHub release](https://img.shields.io/github/v/release/ArsMasiuk/bubble-chains?include_prereleases&style=for-the-badge)
+[![Github All Releases](https://img.shields.io/github/downloads/ArsMasiuk/bubble-chains/total?style=for-the-badge)](https://github.com/ArsMasiuk/bubble-chains/releases/latest)
+[![GitHub release](https://img.shields.io/github/v/release/ArsMasiuk/bubble-chains?include_prereleases&style=for-the-badge)](https://github.com/ArsMasiuk/bubble-chains/releases/latest)
 
 Bubble Chains is a funny 2D game which runs on Linux, Windows and FreeBSD. 
 
