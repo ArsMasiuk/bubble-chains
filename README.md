@@ -9,7 +9,7 @@ You have to collect color bubbles on the field by combining them into chains of 
 
 The aim of Bubble Chains is to remove all of the targets on each level, and to do this before the time (indicated with the blue-colored bar at the right) runs out. Keep doing this until you have passed the last level and won the game. 
 
-![screenshot](https://user-images.githubusercontent.com/19762856/102863506-f8e8ec00-4432-11eb-9772-10b0ca93a92f.PNG)
+[![Watch gameplay video on youtube](https://img.youtube.com/vi/IW_ADc8k3qw/0.jpg)](https://www.youtube.com/watch?v=IW_ADc8k3qw)
 
 # Changes compared to the original game
 
